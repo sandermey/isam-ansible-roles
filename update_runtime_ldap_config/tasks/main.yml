@@ -1,0 +1,17 @@
+- name: Update Runtime ldap.conf
+  isam:
+    appliance: "{{ inventory_hostname }}"
+    username:  "{{ username }}"
+    password:  "{{ password }}"
+    lmi_port:  "{{ lmi_port }}"
+    log:       "{{ log_level }}"
+    force:     "{{ force }}"
+    action    : ibmsecurity.isam.web.runtime.configuration.entry.update
+    isamapi:
+      resource_id : ldap.conf
+      stanza_id   : "{{ update_param_stanza }}"
+      entry_id    : "{{ update_param_id }}"
+      value_id    : "{{ update_param_value }}"
+  notify:
+  - Commit Changes
+  - Restart Web Runtime
