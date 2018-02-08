@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Sander Meyfroot
+  description: Role to delete mapping rule
+  company: IS4U
+
+  license: Apache
+
+  min_ansible_version: 2.2
+
+  galaxy_tags:
+  - ibm
+  - delete
+  - aac
+  - mapping rule
+
+dependencies:
+  - start_config
